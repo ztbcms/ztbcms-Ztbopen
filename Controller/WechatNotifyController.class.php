@@ -8,7 +8,6 @@
 namespace Ztbopen\Controller;
 
 use Common\Controller\Base;
-use System\Service\OrderService;
 use Ztbopen\Service\WechatPayService;
 
 class WechatNotifyController extends Base {
@@ -21,12 +20,12 @@ class WechatNotifyController extends Base {
         if($res){
             // TODO 支付成功逻辑
             $order_sn = I('post.out_trade_no'); //订单号
-            OrderService::doPay($order_sn);
 
             echo 'SUCCESS';
         }else{
             echo 'ERROR';
         }
+        exit;
     }
 
 }
