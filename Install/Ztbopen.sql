@@ -1,3 +1,14 @@
+CREATE TABLE `cms_ztbopen_applications` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(32) NOT NULL DEFAULT '' COMMENT 'ztbopen应用名称',
+  `app_id` varchar(32) NOT NULL DEFAULT '' COMMENT 'app_id',
+  `app_secret` varchar(32) NOT NULL DEFAULT '' COMMENT '应用秘钥',
+  `create_time` int(10) DEFAULT '0' COMMENT '创建时间',
+  `update_time` int(10) DEFAULT '0' COMMENT '更新时间',
+  `is_default` tinyint(2) DEFAULT '0' COMMENT '是否默认',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 CREATE TABLE `cms_ztbopen_wechat` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `userid` int(11) NOT NULL DEFAULT '0',
